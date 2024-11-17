@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo '🏗️👷 Styling your project before committing...'
+yarn format
+yarn lint ||
+(
+    echo '🔨❌ Yoo, you have a problem in your code. Check linter 🔨❌
+          Add changes and try commit again.';
+    false;
+)
+
+echo '🎉 No error found: committing this now.... ✨🚀🏄'

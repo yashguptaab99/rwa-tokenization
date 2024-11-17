@@ -1,0 +1,15 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "explorer.compactFolders": false,
+    "editor.rulers": [120],
+    "editor.tabSize": 2,
+    "editor.insertSpaces": false,
+    "editor.renderLineHighlight": "gutter",
+    "eslint.validate": ["javascript", "typescript"],
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "cSpell.words": ["commitlint", "nomicfoundation", "solcoverjs", "solhint", "typechain", "userdoc", "Yash"],
+    "solidity.compileUsingRemoteVersion": "v0.8.25+commit.b61c2a91"
+}

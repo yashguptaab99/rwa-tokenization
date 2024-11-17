@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "VisualStudioExptTeam.vscodeintellicode",
+        "streetsidesoftware.code-spell-checker",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "wix.vscode-import-cost",
+        "eamodio.gitlens",
+        "Gruntfuggly.todo-tree",
+        "vunguyentuan.vscode-css-variables",
+        "stylelint.vscode-stylelint"
+    ]
+}
