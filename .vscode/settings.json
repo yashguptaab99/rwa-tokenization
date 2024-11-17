@@ -12,8 +12,10 @@
     "typescript.preferences.importModuleSpecifier": "non-relative",
     "cSpell.words": [
         "commitlint",
+        "Crowdsale",
         "keccak",
         "nomicfoundation",
+        "Reentrancy",
         "solcover",
         "solcoverjs",
         "solhint",

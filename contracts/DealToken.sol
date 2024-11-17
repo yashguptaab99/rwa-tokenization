@@ -23,8 +23,8 @@ import '@openzeppelin/contracts/access/AccessControl.sol';
  */
 contract DealToken is ERC20, AccessControl {
     /**
-     * @dev Role identifier for the minter role. This role is used to grant
-     * permissions to accounts that are allowed to mint new tokens.
+     * @dev Role identifier for the minter role.
+     * Accounts with this role are allowed to mint new tokens.
      */
     bytes32 public constant MINTER_ROLE = keccak256('MINTER_ROLE');
 
@@ -33,8 +33,11 @@ contract DealToken is ERC20, AccessControl {
     }
 
     /**
-     * @dev Mints tokens to the specified address.
-     * Can only be called by accounts with the MINTER_ROLE.
+     * @dev Mints new tokens and assigns them to the specified address.
+     * Can only be called by an account with the MINTER_ROLE.
+     *
+     * @param to The address to which the newly minted tokens will be assigned.
+     * @param amount The amount of tokens to be minted.
      */
     function mint(address to, uint256 amount) public onlyRole(MINTER_ROLE) {
         _mint(to, amount);
@@ -43,6 +46,9 @@ contract DealToken is ERC20, AccessControl {
     /**
      * @dev Overrides the _update function to disable transfers between addresses.
      * Tokens can only be minted (from == address(0)) or burned (to == address(0)).
+     * @param from The address from which tokens are transferred.
+     * @param to The address to which tokens are transferred.
+     * @param amount The amount of tokens to be transferred.
      */
     function _update(address from, address to, uint256 amount) internal virtual override {
         // Allow minting and burning but disable transfers between addresses
