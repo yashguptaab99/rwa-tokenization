@@ -68,6 +68,8 @@ library CurrencyTransferLib {
      * or if the balance is insufficient.
      */
     function transferERC20(address _currency, address _from, address _to, uint256 _amount) internal {
+        require(_to != address(0), 'Transfer to zero address');
+        
         if (_from == address(this)) {
             IERC20(_currency).transfer(_to, _amount);
         } else {
