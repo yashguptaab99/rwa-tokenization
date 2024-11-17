@@ -10,6 +10,15 @@
     "eslint.validate": ["javascript", "typescript"],
     "typescript.updateImportsOnFileMove.enabled": "always",
     "typescript.preferences.importModuleSpecifier": "non-relative",
-    "cSpell.words": ["commitlint", "nomicfoundation", "solcoverjs", "solhint", "typechain", "userdoc", "Yash"],
+    "cSpell.words": [
+        "commitlint",
+        "nomicfoundation",
+        "solcover",
+        "solcoverjs",
+        "solhint",
+        "typechain",
+        "userdoc",
+        "Yash"
+    ],
     "solidity.compileUsingRemoteVersion": "v0.8.25+commit.b61c2a91"
 }
